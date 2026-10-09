@@ -1,0 +1,20 @@
+{
+  "groups": [
+    {
+      "symbol": "core",
+      "name": "Core"
+    },
+    {
+      "symbol": "level",
+      "name": "Levels"
+    },
+    {
+      "symbol": "expert",
+      "name": "Expert"
+    },
+    {
+      "symbol": "system",
+      "name": "System"
+    }
+  ]
+}

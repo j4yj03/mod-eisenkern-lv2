@@ -1,0 +1,22 @@
+@prefix lv2: <http://lv2plug.in/ns/lv2core#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix units: <http://lv2plug.in/ns/extensions/units#> .
+@prefix pprops: <http://lv2plug.in/ns/ext/port-props#> .
+@prefix pg: <http://lv2plug.in/ns/ext/port-groups#> .
+@prefix mod: <http://moddevices.com/ns/mod#> .
+@prefix modgui: <http://moddevices.com/ns/modgui#> .
+@prefix pset: <http://lv2plug.in/ns/ext/presets#> .
+
+<https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-mono> a lv2:Plugin; lv2:binary <eisenkern.so>; rdfs:seeAlso <mono.ttl>, <modgui.ttl> .
+<https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-preset-mono-01> a pset:Preset; lv2:appliesTo <https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-mono>; rdfs:label "01 Warm Iron"; rdfs:seeAlso <presets.ttl> .
+<https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-preset-mono-02> a pset:Preset; lv2:appliesTo <https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-mono>; rdfs:label "02 Tight Coil"; rdfs:seeAlso <presets.ttl> .
+<https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-preset-mono-03> a pset:Preset; lv2:appliesTo <https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-mono>; rdfs:label "03 Open Core"; rdfs:seeAlso <presets.ttl> .
+<https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-preset-mono-04> a pset:Preset; lv2:appliesTo <https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-mono>; rdfs:label "04 Linear Reference"; rdfs:seeAlso <presets.ttl> .
+<https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-stereo> a lv2:Plugin; lv2:binary <eisenkern.so>; rdfs:seeAlso <stereo.ttl>, <modgui.ttl> .
+<https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-preset-stereo-01> a pset:Preset; lv2:appliesTo <https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-stereo>; rdfs:label "01 Warm Iron"; rdfs:seeAlso <presets.ttl> .
+<https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-preset-stereo-02> a pset:Preset; lv2:appliesTo <https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-stereo>; rdfs:label "02 Tight Coil"; rdfs:seeAlso <presets.ttl> .
+<https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-preset-stereo-03> a pset:Preset; lv2:appliesTo <https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-stereo>; rdfs:label "03 Open Core"; rdfs:seeAlso <presets.ttl> .
+<https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-preset-stereo-04> a pset:Preset; lv2:appliesTo <https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-stereo>; rdfs:label "04 Linear Reference"; rdfs:seeAlso <presets.ttl> .

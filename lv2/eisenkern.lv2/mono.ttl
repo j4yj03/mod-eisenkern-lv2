@@ -1,0 +1,136 @@
+@prefix lv2: <http://lv2plug.in/ns/lv2core#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix units: <http://lv2plug.in/ns/extensions/units#> .
+@prefix pprops: <http://lv2plug.in/ns/ext/port-props#> .
+@prefix pg: <http://lv2plug.in/ns/ext/port-groups#> .
+@prefix mod: <http://moddevices.com/ns/mod#> .
+@prefix modgui: <http://moddevices.com/ns/modgui#> .
+@prefix pset: <http://lv2plug.in/ns/ext/presets#> .
+
+<https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-mono> a lv2:Plugin;
+    doap:name "Eisenkern Mono";
+    doap:license <https://opensource.org/license/mit>;
+    doap:maintainer [ foaf:name "Eisenkern contributors";
+        foaf:homepage <https://github.com/j4yj03/mod-eisenkern-lv2> ];
+    mod:brand "GreenStripe"; mod:label "Eisenkern";
+    lv2:minorVersion 1; lv2:microVersion 3;
+    lv2:optionalFeature lv2:hardRTCapable;
+    pg:mainInput <https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-mono-group-audio_in>;
+    pg:mainOutput <https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-mono-group-audio_out>;
+    rdfs:comment "Standalone transformer: load-coupled flux core with saturation and remanence macros. Drive scales the source level into the coupled network (pure, no auto-makeup); Output is an explicit trim. No brickwall, no lookahead. Off/2x/4x oversampling, default Off, nominal latency 0/3/4 frames. Expert network parameters live in the host settings. Reduced gray-box model, not hardware calibration. The current bank derives from an input-transformer reference; the product role is intentionally neutral. See project documentation.";
+    lv2:port
+    [ a lv2:InputPort, lv2:AudioPort; lv2:index 0; lv2:symbol "in"; lv2:name "Input"; pg:group <https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-mono-group-audio_in> ],
+    [ a lv2:OutputPort, lv2:AudioPort; lv2:index 1; lv2:symbol "out"; lv2:name "Output"; pg:group <https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-mono-group-audio_out> ],
+    [ a lv2:InputPort, lv2:ControlPort; lv2:index 2;
+      lv2:symbol "eisen"; lv2:name "Eisen";
+      pg:group <https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-mono-group-core>;
+      lv2:shortName "Eisen"; lv2:default 0;
+      lv2:minimum 0; lv2:maximum 3;
+      lv2:portProperty lv2:integer, lv2:enumeration;
+      lv2:scalePoint [ rdfs:label "60s"; rdf:value 0 ];
+      lv2:scalePoint [ rdfs:label "80s"; rdf:value 1 ];
+      lv2:scalePoint [ rdfs:label "00s"; rdf:value 2 ];
+      lv2:scalePoint [ rdfs:label "Symmetric"; rdf:value 3 ];
+      pprops:rangeSteps 4 ],
+    [ a lv2:InputPort, lv2:ControlPort; lv2:index 3;
+      lv2:symbol "drive"; lv2:name "Drive";
+      pg:group <https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-mono-group-core>;
+      lv2:shortName "Drive"; lv2:default 0;
+      lv2:minimum -18; lv2:maximum 24;
+      units:unit units:db;
+      pprops:rangeSteps 421 ],
+    [ a lv2:InputPort, lv2:ControlPort; lv2:index 4;
+      lv2:symbol "saturation"; lv2:name "Saturation";
+      pg:group <https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-mono-group-core>;
+      lv2:shortName "Sat"; lv2:default 100;
+      lv2:minimum 0; lv2:maximum 150;
+      units:unit units:pc;
+      pprops:rangeSteps 301 ],
+    [ a lv2:InputPort, lv2:ControlPort; lv2:index 5;
+      lv2:symbol "bass"; lv2:name "Bass";
+      pg:group <https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-mono-group-core>;
+      lv2:shortName "Bass"; lv2:default 1;
+      lv2:minimum 0.5; lv2:maximum 2;
+      pprops:rangeSteps 151 ],
+    [ a lv2:InputPort, lv2:ControlPort; lv2:index 6;
+      lv2:symbol "remanence"; lv2:name "Remanence";
+      pg:group <https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-mono-group-core>;
+      lv2:shortName "Rem"; lv2:default 100;
+      lv2:minimum 0; lv2:maximum 150;
+      units:unit units:pc;
+      pprops:rangeSteps 301 ],
+    [ a lv2:InputPort, lv2:ControlPort; lv2:index 7;
+      lv2:symbol "output"; lv2:name "Output";
+      pg:group <https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-mono-group-level>;
+      lv2:shortName "Output"; lv2:default 0;
+      lv2:minimum -24; lv2:maximum 24;
+      units:unit units:db;
+      pprops:rangeSteps 481 ],
+    [ a lv2:InputPort, lv2:ControlPort; lv2:index 8;
+      lv2:symbol "load"; lv2:name "Load";
+      pg:group <https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-mono-group-expert>;
+      lv2:shortName "Load"; lv2:default 10000;
+      lv2:minimum 1000; lv2:maximum 100000;
+      pprops:rangeSteps 601 ],
+    [ a lv2:InputPort, lv2:ControlPort; lv2:index 9;
+      lv2:symbol "source"; lv2:name "Source";
+      pg:group <https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-mono-group-expert>;
+      lv2:shortName "Source"; lv2:default 600;
+      lv2:minimum 100; lv2:maximum 2000;
+      pprops:rangeSteps 381 ],
+    [ a lv2:InputPort, lv2:ControlPort; lv2:index 10;
+      lv2:symbol "hf_frequency"; lv2:name "HF Corner";
+      pg:group <https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-mono-group-expert>;
+      lv2:shortName "HF"; lv2:default 26000;
+      lv2:minimum 15000; lv2:maximum 120000;
+      pprops:rangeSteps 601 ],
+    [ a lv2:InputPort, lv2:ControlPort; lv2:index 11;
+      lv2:symbol "hf_q"; lv2:name "HF Q";
+      pg:group <https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-mono-group-expert>;
+      lv2:shortName "Q"; lv2:default 0.70710678118654746;
+      lv2:minimum 0.40000000000000002; lv2:maximum 1.5;
+      pprops:rangeSteps 111 ],
+    [ a lv2:InputPort, lv2:ControlPort; lv2:index 12;
+      lv2:symbol "family"; lv2:name "Family";
+      pg:group <https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-mono-group-expert>;
+      lv2:shortName "Family"; lv2:default 0;
+      lv2:minimum 0; lv2:maximum 1;
+      lv2:portProperty lv2:integer, lv2:enumeration;
+      lv2:scalePoint [ rdfs:label "Power"; rdf:value 0 ];
+      lv2:scalePoint [ rdfs:label "Fröhlich"; rdf:value 1 ];
+      pprops:rangeSteps 2 ],
+    [ a lv2:InputPort, lv2:ControlPort; lv2:index 13;
+      lv2:symbol "exponent"; lv2:name "Exponent";
+      pg:group <https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-mono-group-expert>;
+      lv2:shortName "Exp"; lv2:default 3;
+      lv2:minimum 2; lv2:maximum 13;
+      lv2:portProperty lv2:integer;
+      pprops:rangeSteps 12 ],
+    [ a lv2:InputPort, lv2:ControlPort; lv2:index 14;
+      lv2:symbol "enabled"; lv2:name "Enabled";
+      pg:group <https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-mono-group-system>;
+      lv2:shortName "Enabled"; lv2:default 1;
+      lv2:minimum 0; lv2:maximum 1;
+      lv2:designation lv2:enabled;
+      lv2:portProperty lv2:integer, lv2:toggled;
+      pprops:rangeSteps 2 ],
+    [ a lv2:OutputPort, lv2:ControlPort; lv2:index 15; lv2:symbol "latency"; lv2:name "Nominal latency"; lv2:designation lv2:latency; lv2:portProperty lv2:integer, pprops:notOnGUI; units:unit units:frame; lv2:minimum 0; lv2:maximum 32; lv2:default 0 ],
+    [ a lv2:InputPort, lv2:ControlPort; lv2:index 16;
+      lv2:symbol "oversampling"; lv2:name "Oversampling";
+      pg:group <https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-mono-group-system>;
+      lv2:shortName "OS"; lv2:default 0;
+      lv2:minimum 0; lv2:maximum 2;
+      lv2:portProperty lv2:integer, lv2:enumeration, lv2:connectionOptional;
+      lv2:scalePoint [ rdfs:label "Off"; rdf:value 0 ];
+      lv2:scalePoint [ rdfs:label "2x"; rdf:value 1 ];
+      lv2:scalePoint [ rdfs:label "4x"; rdf:value 2 ];
+      pprops:rangeSteps 3 ] .
+<https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-mono-group-audio_in> a pg:MonoGroup, pg:InputGroup; lv2:symbol "audio_in"; lv2:name "Input" .
+<https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-mono-group-audio_out> a pg:MonoGroup, pg:OutputGroup; lv2:symbol "audio_out"; lv2:name "Output" .
+<https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-mono-group-core> a pg:InputGroup; lv2:symbol "core"; lv2:name "Core" .
+<https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-mono-group-level> a pg:InputGroup; lv2:symbol "level"; lv2:name "Levels" .
+<https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-mono-group-expert> a pg:InputGroup; lv2:symbol "expert"; lv2:name "Expert" .
+<https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-mono-group-system> a pg:InputGroup; lv2:symbol "system"; lv2:name "System" .

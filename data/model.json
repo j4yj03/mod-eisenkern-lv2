@@ -1,0 +1,9 @@
+{
+  "version": "0.1.3",
+  "transformer_bank": "data/transformers.json",
+  "calibration_status": "Own gray-box transformer, bit-identical transfer from mod-1175-lv2 (Green Stripe 76); not hardware-calibrated",
+  "oversampling": 4,
+  "default_oversampling": 0,
+  "latency_2x_frames": 3,
+  "nominal_latency_frames": 4
+}

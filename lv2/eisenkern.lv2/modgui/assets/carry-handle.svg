@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="400" viewBox="0 0 40 400" preserveAspectRatio="none">
+  <!-- Eigene Eisenkern-Zeichnung: Frontansicht, Griff leicht nach außen. -->
+  <defs>
+    <linearGradient id="chrome" x1="0" x2="1">
+      <stop offset="0" stop-color="#454b50"/>
+      <stop offset=".22" stop-color="#b4bac0"/>
+      <stop offset=".43" stop-color="#fafcfd"/>
+      <stop offset=".57" stop-color="#d2d7da"/>
+      <stop offset=".8" stop-color="#606970"/>
+      <stop offset="1" stop-color="#252d32"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="30" cy="19" rx="7" ry="8" fill="#596167"/>
+  <ellipse cx="30" cy="381" rx="7" ry="8" fill="#596167"/>
+  <path d="M30 19 C15 18 9 24 9 39 L7 361 C7 376 16 383 30 381" fill="none" stroke="#252b30" stroke-width="11"/>
+  <path d="M30 19 C15 18 9 24 9 39 L7 361 C7 376 16 383 30 381" fill="none" stroke="url(#chrome)" stroke-width="8"/>
+  <path d="M28 16 C14 16 7 24 7 39 L5 357" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="1.2"/>
+</svg>

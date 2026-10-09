@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 1024 1024">
+  <defs>
+    <radialGradient id="metal" cx="38%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#f5f5f3"/>
+      <stop offset="35%" stop-color="#cbcbc8"/>
+      <stop offset="62%" stop-color="#969693"/>
+      <stop offset="84%" stop-color="#babab7"/>
+      <stop offset="100%" stop-color="#63635f"/>
+    </radialGradient>
+    <radialGradient id="chamfer" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4e4e4c"/>
+      <stop offset="75%" stop-color="#82827f"/>
+      <stop offset="100%" stop-color="#dcdcda"/>
+    </radialGradient>
+    <radialGradient id="lensOff" cx="42%" cy="38%" r="80%">
+      <stop offset="0%" stop-color="#d29a4e"/>
+      <stop offset="18%" stop-color="#b06e24"/>
+      <stop offset="45%" stop-color="#8a4d14"/>
+      <stop offset="75%" stop-color="#5a2c06"/>
+      <stop offset="100%" stop-color="#331702"/>
+    </radialGradient>
+    <radialGradient id="tableOff" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#c08b3f"/>
+      <stop offset="50%" stop-color="#a26a20"/>
+      <stop offset="100%" stop-color="#7c4a10"/>
+    </radialGradient>
+    <radialGradient id="domeOff" cx="46%" cy="42%" r="60%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="78%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#1c0e00" stop-opacity="0.7"/>
+    </radialGradient>
+    <linearGradient id="gloss" x1="0" y1="0" x2="0.55" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.5"/>
+      <stop offset="35%" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="65%" stop-color="#ffffff" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+  </defs>
+
+  <!-- geriffelter Metallrand -->
+  <circle cx="512" cy="512" r="404" fill="none" stroke="#7e7e7b" stroke-width="30" stroke-dasharray="5 5"/>
+  <circle cx="512" cy="512" r="397" fill="none" stroke="#e8e8e5" stroke-width="20" stroke-dasharray="4 6" opacity="0.9"/>
+
+  <!-- Bezel-Ring -->
+  <circle cx="512" cy="512" r="384" fill="url(#metal)" stroke="#4c4c4e" stroke-width="3"/>
+  <circle cx="512" cy="512" r="384" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.35"/>
+
+  <!-- innere Fase -->
+  <circle cx="512" cy="512" r="330" fill="url(#chamfer)"/>
+  <circle cx="512" cy="512" r="330" fill="none" stroke="#333336" stroke-width="2" opacity="0.8"/>
+
+  <!-- dezenter Randlicht-Saum (kein Leuchten) -->
+  <circle cx="512" cy="512" r="318" fill="none" stroke="#8a5a20" stroke-width="4" opacity="0.5"/>
+
+  <!-- Dunkle Amber-Linse (aus) -->
+  <circle cx="512" cy="512" r="308" fill="url(#lensOff)"/>
+
+  <!-- 16 Crown-Facetten -->
+  <g>
+    <polygon points="512,512 820,512 797,630" fill="#ffffff" opacity="0.08"/>
+    <polygon points="512,512 797,630 730,730" fill="#1f0d00" opacity="0.22"/>
+    <polygon points="512,512 730,730 630,797" fill="#ffffff" opacity="0.08"/>
+    <polygon points="512,512 630,797 512,820" fill="#1f0d00" opacity="0.22"/>
+    <polygon points="512,512 512,820 394,797" fill="#ffffff" opacity="0.08"/>
+    <polygon points="512,512 394,797 294,730" fill="#1f0d00" opacity="0.22"/>
+    <polygon points="512,512 294,730 227,630" fill="#ffffff" opacity="0.08"/>
+    <polygon points="512,512 227,630 204,512" fill="#1f0d00" opacity="0.22"/>
+    <polygon points="512,512 204,512 227,394" fill="#ffffff" opacity="0.08"/>
+    <polygon points="512,512 227,394 294,294" fill="#1f0d00" opacity="0.22"/>
+    <polygon points="512,512 294,294 394,227" fill="#ffffff" opacity="0.08"/>
+    <polygon points="512,512 394,227 512,204" fill="#1f0d00" opacity="0.22"/>
+    <polygon points="512,512 512,204 630,227" fill="#ffffff" opacity="0.08"/>
+    <polygon points="512,512 630,227 730,294" fill="#1f0d00" opacity="0.22"/>
+    <polygon points="512,512 730,294 797,394" fill="#ffffff" opacity="0.08"/>
+    <polygon points="512,512 797,394 820,512" fill="#1f0d00" opacity="0.22"/>
+  </g>
+
+  <!-- Facettenkanten (dezent) -->
+  <g stroke="#caa06a" stroke-width="2" opacity="0.28">
+    <line x1="512" y1="512" x2="820" y2="512"/>
+    <line x1="512" y1="512" x2="730" y2="730"/>
+    <line x1="512" y1="512" x2="630" y2="797"/>
+    <line x1="512" y1="512" x2="512" y2="820"/>
+    <line x1="512" y1="512" x2="394" y2="797"/>
+    <line x1="512" y1="512" x2="294" y2="730"/>
+    <line x1="512" y1="512" x2="227" y2="630"/>
+    <line x1="512" y1="512" x2="204" y2="512"/>
+    <line x1="512" y1="512" x2="227" y2="394"/>
+    <line x1="512" y1="512" x2="294" y2="294"/>
+    <line x1="512" y1="512" x2="394" y2="227"/>
+    <line x1="512" y1="512" x2="512" y2="204"/>
+    <line x1="512" y1="512" x2="630" y2="227"/>
+    <line x1="512" y1="512" x2="730" y2="294"/>
+    <line x1="512" y1="512" x2="797" y2="394"/>
+  </g>
+
+  <!-- Kantenschattierung -->
+  <circle cx="512" cy="512" r="308" fill="url(#domeOff)"/>
+
+  <!-- Tafel (unbeleuchtet) -->
+  <polygon points="642,512 604,604 512,642 420,604 382,512 420,420 512,382 604,420" fill="url(#tableOff)" stroke="#9a7030" stroke-width="2"/>
+
+  <circle cx="512" cy="512" r="308" fill="url(#gloss)"/>
+
+  <!-- Glanzlichter (neutral, kein Selbstleuchten) -->
+  <ellipse cx="412" cy="378" rx="150" ry="92" fill="#ffffff" opacity="0.45" transform="rotate(-24 412 378)" filter="url(#soft)"/>
+  <ellipse cx="392" cy="350" rx="54" ry="26" fill="#ffffff" opacity="0.9" transform="rotate(-24 392 350)"/>
+  <ellipse cx="646" cy="668" rx="88" ry="32" fill="#ddd6ca" opacity="0.25" transform="rotate(-22 646 668)" filter="url(#soft)"/>
+  <ellipse cx="664" cy="692" rx="26" ry="10" fill="#efe9dc" opacity="0.5" transform="rotate(-22 664 692)"/>
+</svg>

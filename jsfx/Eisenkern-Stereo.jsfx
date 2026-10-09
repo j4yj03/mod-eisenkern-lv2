@@ -1,0 +1,57 @@
+desc:Eisenkern Stereo
+author:Eisenkern contributors
+version:0.1.3
+tags:transformer saturation iron colour
+// SPDX-License-Identifier: MIT
+options:maxmem=8192 prealloc=8192
+import Eisenkern-Core.jsfx-inc
+import Eisenkern-Presets.jsfx-inc
+import Eisenkern-UI.jsfx-inc
+slider1:0<0,3,1{60s,80s,00s,Symmetric}>Eisen
+slider2:0<-18,24,0.1>Drive (dB)
+slider3:100<0,150,0.5>Saturation (%)
+slider4:1<0.5,2,0.01>Bass
+slider5:100<0,150,0.5>Remanence (%)
+slider6:0<-24,24,0.1>Output (dB)
+slider7:10000<1000,100000,10>Load
+slider8:600<100,2000,5>Source
+slider9:26000<15000,120000,100>HF Corner
+slider10:0.7071067811865475<0.4,1.5,0.01>HF Q
+slider11:0<0,1,1{Power,Fröhlich}>Family
+slider12:3<2,13,1>Exponent
+slider13:1<0,1,1{Off,On}>Enabled
+slider15:0<0,2,1{Off,2x,4x}>Oversampling
+slider14:0<0,4,1{Custom,01 Warm Iron,02 Tight Coil,03 Open Core,04 Linear Reference}>Profile preset
+in_pin:Input L
+in_pin:Input R
+out_pin:Output L
+out_pin:Output R
+
+@init
+ext_nodenorm=1; ext_tail_size=-1;
+ek_stereo=1;
+#ek_ver="0.1.3";
+ek_engine.ek_reset(ek_stereo); ek_rate=srate;
+ek_last_preset=slider14; ek_have_controls=0;
+
+@slider
+slider14!=ek_last_preset ? (slider14>0 ? ek_apply_preset(slider14); ek_last_preset=slider14;) : (
+  ek_have_controls && (slider1!=ek_prev1 || slider2!=ek_prev2 || slider3!=ek_prev3 || slider4!=ek_prev4 || slider5!=ek_prev5 || slider6!=ek_prev6 || slider7!=ek_prev7 || slider8!=ek_prev8 || slider9!=ek_prev9 || slider10!=ek_prev10 || slider11!=ek_prev11 || slider12!=ek_prev12 || slider13!=ek_prev13 || slider15!=ek_prev15) ? (
+    slider14=0; ek_last_preset=0; sliderchange(slider14);
+  );
+);
+ek_prev1=slider1; ek_prev2=slider2; ek_prev3=slider3; ek_prev4=slider4; ek_prev5=slider5; ek_prev6=slider6; ek_prev7=slider7; ek_prev8=slider8; ek_prev9=slider9; ek_prev10=slider10; ek_prev11=slider11; ek_prev12=slider12; ek_prev13=slider13; ek_prev15=slider15; ek_have_controls=1;
+ek_engine.ek_set(slider1,slider2,slider3,slider4,slider5,slider6,slider7,slider8,slider9,slider10,slider11,slider12,slider13,slider15);
+
+@block
+srate!=ek_rate ? (
+  ek_engine.ek_reset(ek_stereo); ek_rate=srate;
+);
+ek_engine.ek_set(slider1,slider2,slider3,slider4,slider5,slider6,slider7,slider8,slider9,slider10,slider11,slider12,slider13,slider15);
+pdc_delay=ek_engine.ek_latency(); pdc_bot_ch=0; pdc_top_ch=2;
+
+@sample
+ek_rawL=ek_bound(ek_finite(spl0,0),-256,256);
+ek_rawR=ek_bound(ek_finite(spl1,0),-256,256);
+ek_stereo ? ek_engine.ek_process(ek_rawL,ek_rawR) : ek_engine.ek_process(ek_rawL,ek_rawL);
+spl0=ek_engine.outL; spl1=ek_engine.outR;

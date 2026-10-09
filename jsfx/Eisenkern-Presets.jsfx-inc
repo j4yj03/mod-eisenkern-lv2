@@ -1,0 +1,69 @@
+// Generated factory presets; the bank anchors hold only at neutral macros.
+@init
+function ek_apply_preset(which) (
+  which==1 ? (
+    slider1=0;
+    slider2=0;
+    slider3=100;
+    slider4=1;
+    slider5=100;
+    slider6=0;
+    slider7=10000;
+    slider8=600;
+    slider9=26000;
+    slider10=0.70710678118654746;
+    slider11=0;
+    slider12=3;
+    slider13=1;
+    slider15=0;
+  );
+  which==2 ? (
+    slider1=1;
+    slider2=0;
+    slider3=100;
+    slider4=1;
+    slider5=100;
+    slider6=0;
+    slider7=10000;
+    slider8=600;
+    slider9=48000;
+    slider10=0.70710678118654746;
+    slider11=0;
+    slider12=5;
+    slider13=1;
+    slider15=0;
+  );
+  which==3 ? (
+    slider1=2;
+    slider2=0;
+    slider3=100;
+    slider4=1;
+    slider5=100;
+    slider6=0;
+    slider7=10000;
+    slider8=600;
+    slider9=108256.99342420955;
+    slider10=0.66267210834206303;
+    slider11=1;
+    slider12=3;
+    slider13=1;
+    slider15=0;
+  );
+  which==4 ? (
+    slider1=3;
+    slider2=0;
+    slider3=100;
+    slider4=1;
+    slider5=100;
+    slider6=0;
+    slider7=10000;
+    slider8=600;
+    slider9=108256.99342420955;
+    slider10=0.66267210834206303;
+    slider11=0;
+    slider12=3;
+    slider13=1;
+    slider15=0;
+  );
+  sliderchange(24575);
+);

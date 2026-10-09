@@ -1,0 +1,140 @@
+@prefix lv2: <http://lv2plug.in/ns/lv2core#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix units: <http://lv2plug.in/ns/extensions/units#> .
+@prefix pprops: <http://lv2plug.in/ns/ext/port-props#> .
+@prefix pg: <http://lv2plug.in/ns/ext/port-groups#> .
+@prefix mod: <http://moddevices.com/ns/mod#> .
+@prefix modgui: <http://moddevices.com/ns/modgui#> .
+@prefix pset: <http://lv2plug.in/ns/ext/presets#> .
+
+<https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-preset-mono-01> a pset:Preset; lv2:appliesTo <https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-mono>; rdfs:label "01 Warm Iron"; lv2:port
+    [ lv2:symbol "eisen"; pset:value 0 ],
+    [ lv2:symbol "drive"; pset:value 0 ],
+    [ lv2:symbol "saturation"; pset:value 100 ],
+    [ lv2:symbol "bass"; pset:value 1 ],
+    [ lv2:symbol "remanence"; pset:value 100 ],
+    [ lv2:symbol "output"; pset:value 0 ],
+    [ lv2:symbol "load"; pset:value 10000 ],
+    [ lv2:symbol "source"; pset:value 600 ],
+    [ lv2:symbol "hf_frequency"; pset:value 26000 ],
+    [ lv2:symbol "hf_q"; pset:value 0.70710678118654746 ],
+    [ lv2:symbol "family"; pset:value 0 ],
+    [ lv2:symbol "exponent"; pset:value 3 ],
+    [ lv2:symbol "enabled"; pset:value 1 ],
+    [ lv2:symbol "oversampling"; pset:value 0 ] .
+
+<https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-preset-mono-02> a pset:Preset; lv2:appliesTo <https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-mono>; rdfs:label "02 Tight Coil"; lv2:port
+    [ lv2:symbol "eisen"; pset:value 1 ],
+    [ lv2:symbol "drive"; pset:value 0 ],
+    [ lv2:symbol "saturation"; pset:value 100 ],
+    [ lv2:symbol "bass"; pset:value 1 ],
+    [ lv2:symbol "remanence"; pset:value 100 ],
+    [ lv2:symbol "output"; pset:value 0 ],
+    [ lv2:symbol "load"; pset:value 10000 ],
+    [ lv2:symbol "source"; pset:value 600 ],
+    [ lv2:symbol "hf_frequency"; pset:value 48000 ],
+    [ lv2:symbol "hf_q"; pset:value 0.70710678118654746 ],
+    [ lv2:symbol "family"; pset:value 0 ],
+    [ lv2:symbol "exponent"; pset:value 5 ],
+    [ lv2:symbol "enabled"; pset:value 1 ],
+    [ lv2:symbol "oversampling"; pset:value 0 ] .
+
+<https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-preset-mono-03> a pset:Preset; lv2:appliesTo <https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-mono>; rdfs:label "03 Open Core"; lv2:port
+    [ lv2:symbol "eisen"; pset:value 2 ],
+    [ lv2:symbol "drive"; pset:value 0 ],
+    [ lv2:symbol "saturation"; pset:value 100 ],
+    [ lv2:symbol "bass"; pset:value 1 ],
+    [ lv2:symbol "remanence"; pset:value 100 ],
+    [ lv2:symbol "output"; pset:value 0 ],
+    [ lv2:symbol "load"; pset:value 10000 ],
+    [ lv2:symbol "source"; pset:value 600 ],
+    [ lv2:symbol "hf_frequency"; pset:value 108256.99342420955 ],
+    [ lv2:symbol "hf_q"; pset:value 0.66267210834206303 ],
+    [ lv2:symbol "family"; pset:value 1 ],
+    [ lv2:symbol "exponent"; pset:value 3 ],
+    [ lv2:symbol "enabled"; pset:value 1 ],
+    [ lv2:symbol "oversampling"; pset:value 0 ] .
+
+<https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-preset-mono-04> a pset:Preset; lv2:appliesTo <https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-mono>; rdfs:label "04 Linear Reference"; lv2:port
+    [ lv2:symbol "eisen"; pset:value 3 ],
+    [ lv2:symbol "drive"; pset:value 0 ],
+    [ lv2:symbol "saturation"; pset:value 100 ],
+    [ lv2:symbol "bass"; pset:value 1 ],
+    [ lv2:symbol "remanence"; pset:value 100 ],
+    [ lv2:symbol "output"; pset:value 0 ],
+    [ lv2:symbol "load"; pset:value 10000 ],
+    [ lv2:symbol "source"; pset:value 600 ],
+    [ lv2:symbol "hf_frequency"; pset:value 108256.99342420955 ],
+    [ lv2:symbol "hf_q"; pset:value 0.66267210834206303 ],
+    [ lv2:symbol "family"; pset:value 0 ],
+    [ lv2:symbol "exponent"; pset:value 3 ],
+    [ lv2:symbol "enabled"; pset:value 1 ],
+    [ lv2:symbol "oversampling"; pset:value 0 ] .
+
+<https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-preset-stereo-01> a pset:Preset; lv2:appliesTo <https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-stereo>; rdfs:label "01 Warm Iron"; lv2:port
+    [ lv2:symbol "eisen"; pset:value 0 ],
+    [ lv2:symbol "drive"; pset:value 0 ],
+    [ lv2:symbol "saturation"; pset:value 100 ],
+    [ lv2:symbol "bass"; pset:value 1 ],
+    [ lv2:symbol "remanence"; pset:value 100 ],
+    [ lv2:symbol "output"; pset:value 0 ],
+    [ lv2:symbol "load"; pset:value 10000 ],
+    [ lv2:symbol "source"; pset:value 600 ],
+    [ lv2:symbol "hf_frequency"; pset:value 26000 ],
+    [ lv2:symbol "hf_q"; pset:value 0.70710678118654746 ],
+    [ lv2:symbol "family"; pset:value 0 ],
+    [ lv2:symbol "exponent"; pset:value 3 ],
+    [ lv2:symbol "enabled"; pset:value 1 ],
+    [ lv2:symbol "oversampling"; pset:value 0 ] .
+
+<https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-preset-stereo-02> a pset:Preset; lv2:appliesTo <https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-stereo>; rdfs:label "02 Tight Coil"; lv2:port
+    [ lv2:symbol "eisen"; pset:value 1 ],
+    [ lv2:symbol "drive"; pset:value 0 ],
+    [ lv2:symbol "saturation"; pset:value 100 ],
+    [ lv2:symbol "bass"; pset:value 1 ],
+    [ lv2:symbol "remanence"; pset:value 100 ],
+    [ lv2:symbol "output"; pset:value 0 ],
+    [ lv2:symbol "load"; pset:value 10000 ],
+    [ lv2:symbol "source"; pset:value 600 ],
+    [ lv2:symbol "hf_frequency"; pset:value 48000 ],
+    [ lv2:symbol "hf_q"; pset:value 0.70710678118654746 ],
+    [ lv2:symbol "family"; pset:value 0 ],
+    [ lv2:symbol "exponent"; pset:value 5 ],
+    [ lv2:symbol "enabled"; pset:value 1 ],
+    [ lv2:symbol "oversampling"; pset:value 0 ] .
+
+<https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-preset-stereo-03> a pset:Preset; lv2:appliesTo <https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-stereo>; rdfs:label "03 Open Core"; lv2:port
+    [ lv2:symbol "eisen"; pset:value 2 ],
+    [ lv2:symbol "drive"; pset:value 0 ],
+    [ lv2:symbol "saturation"; pset:value 100 ],
+    [ lv2:symbol "bass"; pset:value 1 ],
+    [ lv2:symbol "remanence"; pset:value 100 ],
+    [ lv2:symbol "output"; pset:value 0 ],
+    [ lv2:symbol "load"; pset:value 10000 ],
+    [ lv2:symbol "source"; pset:value 600 ],
+    [ lv2:symbol "hf_frequency"; pset:value 108256.99342420955 ],
+    [ lv2:symbol "hf_q"; pset:value 0.66267210834206303 ],
+    [ lv2:symbol "family"; pset:value 1 ],
+    [ lv2:symbol "exponent"; pset:value 3 ],
+    [ lv2:symbol "enabled"; pset:value 1 ],
+    [ lv2:symbol "oversampling"; pset:value 0 ] .
+
+<https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-preset-stereo-04> a pset:Preset; lv2:appliesTo <https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-stereo>; rdfs:label "04 Linear Reference"; lv2:port
+    [ lv2:symbol "eisen"; pset:value 3 ],
+    [ lv2:symbol "drive"; pset:value 0 ],
+    [ lv2:symbol "saturation"; pset:value 100 ],
+    [ lv2:symbol "bass"; pset:value 1 ],
+    [ lv2:symbol "remanence"; pset:value 100 ],
+    [ lv2:symbol "output"; pset:value 0 ],
+    [ lv2:symbol "load"; pset:value 10000 ],
+    [ lv2:symbol "source"; pset:value 600 ],
+    [ lv2:symbol "hf_frequency"; pset:value 108256.99342420955 ],
+    [ lv2:symbol "hf_q"; pset:value 0.66267210834206303 ],
+    [ lv2:symbol "family"; pset:value 0 ],
+    [ lv2:symbol "exponent"; pset:value 3 ],
+    [ lv2:symbol "enabled"; pset:value 1 ],
+    [ lv2:symbol "oversampling"; pset:value 0 ] .
+

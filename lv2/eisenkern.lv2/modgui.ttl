@@ -1,0 +1,54 @@
+@prefix lv2: <http://lv2plug.in/ns/lv2core#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix units: <http://lv2plug.in/ns/extensions/units#> .
+@prefix pprops: <http://lv2plug.in/ns/ext/port-props#> .
+@prefix pg: <http://lv2plug.in/ns/ext/port-groups#> .
+@prefix mod: <http://moddevices.com/ns/mod#> .
+@prefix modgui: <http://moddevices.com/ns/modgui#> .
+@prefix pset: <http://lv2plug.in/ns/ext/presets#> .
+
+<https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-mono> modgui:gui [
+    modgui:resourcesDirectory <modgui>;
+    modgui:iconTemplate <modgui/icon-mono.html>;
+    modgui:stylesheet <modgui/eisenkern.css>;
+    modgui:screenshot <modgui/screenshot-mono.png>;
+    modgui:thumbnail <modgui/thumbnail-mono.png>;
+    modgui:port
+    [ lv2:index 0; lv2:symbol "eisen"; lv2:name "Eisen" ],
+    [ lv2:index 1; lv2:symbol "drive"; lv2:name "Drive" ],
+    [ lv2:index 2; lv2:symbol "saturation"; lv2:name "Saturation" ],
+    [ lv2:index 3; lv2:symbol "bass"; lv2:name "Bass" ],
+    [ lv2:index 4; lv2:symbol "remanence"; lv2:name "Remanence" ],
+    [ lv2:index 5; lv2:symbol "output"; lv2:name "Output" ],
+    [ lv2:index 6; lv2:symbol "load"; lv2:name "Load" ],
+    [ lv2:index 7; lv2:symbol "source"; lv2:name "Source" ],
+    [ lv2:index 8; lv2:symbol "hf_frequency"; lv2:name "HF Corner" ],
+    [ lv2:index 9; lv2:symbol "hf_q"; lv2:name "HF Q" ],
+    [ lv2:index 10; lv2:symbol "family"; lv2:name "Family" ],
+    [ lv2:index 11; lv2:symbol "exponent"; lv2:name "Exponent" ],
+    [ lv2:index 12; lv2:symbol "oversampling"; lv2:name "Oversampling" ] ] .
+
+<https://github.com/j4yj03/mod-eisenkern-lv2#eisenkern-stereo> modgui:gui [
+    modgui:resourcesDirectory <modgui>;
+    modgui:iconTemplate <modgui/icon-stereo.html>;
+    modgui:stylesheet <modgui/eisenkern.css>;
+    modgui:screenshot <modgui/screenshot-stereo.png>;
+    modgui:thumbnail <modgui/thumbnail-stereo.png>;
+    modgui:port
+    [ lv2:index 0; lv2:symbol "eisen"; lv2:name "Eisen" ],
+    [ lv2:index 1; lv2:symbol "drive"; lv2:name "Drive" ],
+    [ lv2:index 2; lv2:symbol "saturation"; lv2:name "Saturation" ],
+    [ lv2:index 3; lv2:symbol "bass"; lv2:name "Bass" ],
+    [ lv2:index 4; lv2:symbol "remanence"; lv2:name "Remanence" ],
+    [ lv2:index 5; lv2:symbol "output"; lv2:name "Output" ],
+    [ lv2:index 6; lv2:symbol "load"; lv2:name "Load" ],
+    [ lv2:index 7; lv2:symbol "source"; lv2:name "Source" ],
+    [ lv2:index 8; lv2:symbol "hf_frequency"; lv2:name "HF Corner" ],
+    [ lv2:index 9; lv2:symbol "hf_q"; lv2:name "HF Q" ],
+    [ lv2:index 10; lv2:symbol "family"; lv2:name "Family" ],
+    [ lv2:index 11; lv2:symbol "exponent"; lv2:name "Exponent" ],
+    [ lv2:index 12; lv2:symbol "oversampling"; lv2:name "Oversampling" ] ] .
+

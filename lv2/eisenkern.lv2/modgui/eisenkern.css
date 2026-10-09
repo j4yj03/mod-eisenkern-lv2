@@ -1,0 +1,134 @@
+/* SPDX-License-Identifier: MIT — Eisenkern.
+   Amp-head/variac panel after transformer-front.png (element map:
+   modgui/assets/README.md). Brushed purple head plate with grill slots and
+   the stepped EISEN dial; base row with prepared THD meter, five film knobs
+   and the power bay (bypass toggle + pilot). Silver chassis, carry rails, feet.
+   Supplied aluminium/toggle filmstrips and pilot SVGs; upper-left lighting.
+   Draggable: full frame ring and footer plate. MOD owns control interaction. */
+.ek{{{cns}}} { width:800px; box-sizing:border-box; position:relative; color:#10161a; font:13px Arial,Helvetica,sans-serif; padding:26px 24px 8px; border:1px solid #6f7679; border-radius:7px;
+  background:linear-gradient(135deg,rgba(255,255,255,.12),rgba(0,0,0,.07)),repeating-linear-gradient(90deg,rgba(255,255,255,.09) 0 1px,rgba(0,0,0,.05) 1px 3px),linear-gradient(180deg,#ced4d7 0%,#bcc3c6 46%,#b0b7ba 54%,#c5cbcd 100%);
+  box-shadow:5px 7px 14px rgba(0,0,0,.20),1px 2px 3px rgba(0,0,0,.16),inset 1px 1px 1px rgba(255,255,255,.75),inset -2px -2px 5px rgba(0,0,0,.18); }
+.ek{{{cns}}} .ek-screw,.ek{{{cns}}} .ek-screw-i { position:absolute; width:15px; height:15px; border-radius:50%; pointer-events:none;
+  background:radial-gradient(circle at 36% 30%,#7c8386 0,#5c6367 42%,#3d4346 78%,#2b3033 100%);
+  box-shadow:1px 2px 2px rgba(0,0,0,.4),inset 1px 1px 1px rgba(255,255,255,.3); }
+.ek{{{cns}}} .ek-cross { position:absolute; top:0; left:0; width:100%; height:100%; }
+.ek{{{cns}}} .ek-cross::before,.ek{{{cns}}} .ek-cross::after { content:""; position:absolute; background:#181c1f; }
+.ek{{{cns}}} .ek-cross::before { top:4px; bottom:4px; left:50%; width:2px; transform:translateX(-50%); }
+.ek{{{cns}}} .ek-cross::after { left:4px; right:4px; top:50%; height:2px; transform:translateY(-50%); }
+.ek{{{cns}}} .ek-screw-tl { top:7px; left:7px; }
+.ek{{{cns}}} .ek-screw-tr { top:7px; right:7px; }
+.ek{{{cns}}} .ek-screw-bl { bottom:7px; left:7px; }
+.ek{{{cns}}} .ek-screw-br { bottom:7px; right:7px; }
+.ek{{{cns}}} .ek-screw-i { width:11px; height:11px; }
+.ek{{{cns}}} .ek-screw-i .ek-cross::before { top:2px; bottom:2px; width:1px; }
+.ek{{{cns}}} .ek-screw-i .ek-cross::after { left:2px; right:2px; height:1px; }
+.ek{{{cns}}} .ek-screw-i-tl { top:9px; left:11px; }
+.ek{{{cns}}} .ek-screw-i-tr { top:9px; right:11px; }
+.ek{{{cns}}} .ek-screw-i-bl { bottom:9px; left:11px; }
+.ek{{{cns}}} .ek-screw-i-br { bottom:9px; right:11px; }
+
+/* Rack: head plate over base box; chrome carry rails ride the rack edges. */
+.ek{{{cns}}} .ek-bays { position:relative; display:flex; flex-direction:column; gap:9px; padding:11px 13px; border:1px solid #767d80; border-radius:8px;
+  background:linear-gradient(180deg,#d5dbdd 0%,#c2c9cc 55%,#b7bec1 100%);
+  box-shadow:inset 1px 1px 1px rgba(255,255,255,.55),inset -1px -1px 2px rgba(0,0,0,.12); }
+.ek{{{cns}}} .ek-handle { position:absolute; top:8px; bottom:8px; width:34px;
+  pointer-events:none; z-index:4; background:url(/resources/assets/carry-handle.svg{{{ns}}}) center/100% 100% no-repeat;
+  filter:drop-shadow(3px 3px 2px rgba(0,0,0,.27)); }
+.ek{{{cns}}} .ek-handle-l { left:-3px; }
+.ek{{{cns}}} .ek-handle-r { right:-3px; transform:scaleX(-1); }
+
+/* Head: brushed purple plate, grill slots, EISEN as the variac dial. */
+.ek{{{cns}}} .ek-head { position:relative; height:198px; margin:0 28px; padding:9px 16px 0; border:1px solid #5e3568; border-radius:6px;
+  background:repeating-linear-gradient(180deg,rgba(255,255,255,.05) 0 1px,rgba(0,0,0,.045) 1px 3px),
+             linear-gradient(180deg,#ab66bb 0%,#9d58ae 48%,#8f4da0 100%);
+  box-shadow:inset 1px 1px 2px rgba(255,255,255,.25),inset -1px -2px 4px rgba(0,0,0,.22); }
+.ek{{{cns}}} .ek-brand { position:absolute; top:12px; left:38px; color:#f4ecf7; white-space:nowrap; }
+.ek{{{cns}}} .ek-brand b { display:block; font-size:15px; font-weight:bold; letter-spacing:2.5px; text-shadow:0 1px 2px rgba(0,0,0,.35); }
+.ek{{{cns}}} .ek-brand span { display:block; margin-top:1px; font-size:8px; font-weight:bold; letter-spacing:2.2px; text-shadow:0 1px 1px rgba(0,0,0,.35); }
+.ek{{{cns}}} .ek-grill { display:flex; gap:9px; justify-content:center; margin-top:2px; }
+.ek{{{cns}}} .ek-slot { width:13px; height:32px; border-radius:6px; background:linear-gradient(180deg,#2b2427 0,#151113 100%);
+  box-shadow:inset 0 1px 2px rgba(0,0,0,.8),0 1px 0 rgba(255,255,255,.22); }
+.ek{{{cns}}} .ek-variac { position:absolute; left:68px; top:47px; width:260px; height:148px; }
+/* Four-state enumeration rendered through the 65-frame chicken-head filmstrip
+   (assets/eisen-knob.png, tools/make_eisen_knob.py). MOD maps the integer
+   range 0..3 to frames 0/21/43/64; the beak then points at -135/-45/
+   +45/+135 deg. Sockel und Achse bleiben zentriert und ortsfest. */
+.ek{{{cns}}} .ek-eisen-knob { position:absolute; left:calc(50% - 64px); top:calc(50% - 64px);
+  width:128px; height:128px; cursor:ns-resize; touch-action:none;
+  background-image:url(/resources/assets/eisen-knob.png{{{ns}}});
+  background-repeat:no-repeat; background-size:8320px 128px;
+  filter:drop-shadow(2px 3px 2px rgba(0,0,0,.32)); }
+.ek{{{cns}}} .ek-model { position:absolute; transform:translate(-50%,-50%); color:#f7f2f8;
+  font-size:13px; font-weight:bold; letter-spacing:1.2px; white-space:nowrap;
+  text-shadow:0 1px 3px rgba(0,0,0,.55); pointer-events:none; }
+.ek{{{cns}}} .ek-model-0 { left:66px; top:138px; }
+.ek{{{cns}}} .ek-model-1 { left:66px; top:10px; }
+.ek{{{cns}}} .ek-model-2 { left:194px; top:10px; }
+.ek{{{cns}}} .ek-model-3 { left:194px; top:138px; }
+.ek{{{cns}}} .ek-presets { position:absolute; right:36px; top:94px; width:236px; }
+.ek{{{cns}}} .ek-presets label { display:block; margin-bottom:7px; color:#f7f2f8;
+  font-size:10px; font-weight:bold; letter-spacing:2px; }
+.ek{{{cns}}} .ek-presets select { width:100%; height:31px; padding:3px 9px;
+  color:#f7f2f8; font: bold 12px Arial,Helvetica,sans-serif; border:1px solid #4c2955;
+  border-radius:4px; background:#653c71; box-shadow:inset 0 1px 3px rgba(0,0,0,.3),0 1px 0 rgba(255,255,255,.15); }
+
+/* Base: prepared THD meter, five knobs and the power bay. */
+.ek{{{cns}}} .ek-base { position:relative; height:124px; display:grid; grid-template-columns:118px minmax(0,1fr) 96px; gap:8px; align-items:center; padding:8px 12px;
+  border:1px solid #7c8386; border-radius:8px; background:linear-gradient(180deg,#cfd5d7 0%,#bac1c4 100%);
+  box-shadow:inset 1px 1px 1px rgba(255,255,255,.5),inset -1px -1px 2px rgba(0,0,0,.12); }
+.ek{{{cns}}} .ek-meter { position:relative; width:118px; height:78px; }
+.ek{{{cns}}} .ek-meter img { position:absolute; inset:0; display:block; width:100%; height:100%; }
+.ek{{{cns}}} .ek-meter-needle { transform-origin:50% 96.5%; }
+.ek{{{cns}}} .ek-meter-hub { z-index:2; }
+.ek{{{cns}}} .ek-knobs { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); justify-items:center; }
+.ek{{{cns}}} .ek-control { width:104px; max-width:100%; text-align:center; }
+.ek{{{cns}}} .ek-knobrow { display:grid; grid-template-columns:1fr 50px 1fr; align-items:center; gap:4px; }
+.ek{{{cns}}} .ek-scale:first-child { text-align:right; }
+.ek{{{cns}}} .ek-scale:last-child { text-align:left; }
+.ek{{{cns}}} .ek-scale { font-style:normal; font-size:7px; letter-spacing:.3px; color:#23292c; }
+/* 65 horizontal frames, each 128x128, displayed at 50x50. MOD film measures
+   background-size to derive 64 steps; do not rotate the complete bitmap. */
+.ek{{{cns}}} .ek-knob { width:50px; height:50px; flex:none; cursor:ns-resize; touch-action:none;
+  background-image:url(/resources/assets/aluminium.png{{{ns}}}); background-repeat:no-repeat; background-size:3250px 50px;
+  filter:drop-shadow(2px 3px 2px rgba(0,0,0,.23)); }
+.ek{{{cns}}} .ek-control label { display:block; margin:3px 0 0; font-size:8px; line-height:9px; font-weight:bold; letter-spacing:1px; }
+.ek{{{cns}}} .ek-control .ek-value { display:block; box-sizing:border-box; width:68px; min-height:18px; margin:2px auto 0; padding:1px 5px; font-size:9.5px; line-height:13px; font-weight:bold; white-space:nowrap; }
+.ek{{{cns}}} .ek-value { color:#10161a; border:1px solid #6f777b; border-radius:3px; background:#e0e5e7;
+  box-shadow:inset 1px 1px 2px rgba(0,0,0,.14),1px 1px 0 rgba(255,255,255,.4); }
+.ek{{{cns}}} .ek-side { display:flex; flex-direction:column; align-items:center; justify-content:center; }
+.ek{{{cns}}} .ek-power { display:grid; grid-template-columns:44px 44px; gap:10px; align-items:center; justify-items:center; }
+/* Two vertical 88x128 frames. Bypass value 1 is OFF audio, value 0 ON audio. */
+.ek{{{cns}}} .ek-bypass { position:relative; width:44px; height:64px; flex:none; cursor:pointer; touch-action:none;
+  background-image:url(/resources/assets/toggle.png{{{ns}}}); background-size:44px 128px; background-repeat:no-repeat; background-position:0 0;
+  filter:drop-shadow(2px 3px 2px rgba(0,0,0,.23)); }
+.ek{{{cns}}} .ek-bypass.on { background-position:0 -64px; }
+.ek{{{cns}}} .ek-lamp { width:44px; height:44px; flex:none; background:url(/resources/assets/pilot_on.svg{{{ns}}}) center/44px 44px no-repeat;
+  filter:drop-shadow(1px 2px 1px rgba(0,0,0,.2)); }
+.ek{{{cns}}} .ek-bypass.on ~ .ek-lamp { background-image:url(/resources/assets/pilot_off.svg{{{ns}}}); }
+
+.ek{{{cns}}} footer { display:flex; align-items:center; margin:7px 0 1px; min-height:46px; }
+.ek{{{cns}}} .ek-plate { padding-left:2px; }
+.ek{{{cns}}} .ek-plate b { display:block; font-size:10px; font-weight:bold; letter-spacing:2px; }
+.ek{{{cns}}} .ek-plate span { display:block; margin-top:1px; font-size:8px; font-weight:bold; letter-spacing:1.6px; }
+/* Version+revision line under the variant label; same ink keeps the contrast. */
+.ek{{{cns}}} .ek-plate span.ek-plate-version { margin-top:2px; font-weight:normal; letter-spacing:.8px; }
+.ek{{{cns}}} .ek-foot { position:absolute; bottom:-5px; width:92px; height:10px; border-radius:4px; background:#22262a;
+  box-shadow:0 2px 2px rgba(0,0,0,.3); }
+.ek{{{cns}}} .ek-foot-l { left:64px; } .ek{{{cns}}} .ek-foot-r { right:64px; }
+/* Override MOD's full-panel overlay explicitly: controls are never descendants
+   of the handle, so mouse/touch knob gestures cannot start panel dragging.
+   The four rails tile the visible frame ring exactly (panel padding: 26px top,
+   24px sides, 8px bottom) without covering bays, footer or the feet; the plate
+   makes the footer label draggable as well. */
+.ek{{{cns}}} .mod-drag-handle.ek-drag { position:absolute; z-index:1; cursor:move; }
+.ek{{{cns}}} .mod-drag-handle.ek-drag.ek-drag-top { top:0; right:0; bottom:auto; left:0; height:26px; }
+.ek{{{cns}}} .mod-drag-handle.ek-drag.ek-drag-left { top:26px; right:auto; bottom:9px; left:0; width:24px; height:auto; }
+.ek{{{cns}}} .mod-drag-handle.ek-drag.ek-drag-right { top:26px; right:0; bottom:9px; left:auto; width:24px; height:auto; }
+.ek{{{cns}}} .mod-drag-handle.ek-drag.ek-drag-bottom { top:auto; bottom:0; left:0; right:0; height:8px; }
+.ek{{{cns}}} .ek-plate.ek-drag-foot { position:relative; top:auto; right:auto; bottom:auto; left:auto; z-index:auto; cursor:move; touch-action:none; }
+/* Pedalboard zooms on drag-handle clicks (event.target must carry
+   mod-drag-handle); children pass clicks through to the plate itself. */
+.ek{{{cns}}} .ek-plate b, .ek{{{cns}}} .ek-plate span { pointer-events:none; }
+.ek{{{cns}}} .ek-inputs,.ek{{{cns}}} .ek-outputs { position:absolute; top:50%; transform:translateY(-50%); display:flex; flex-direction:column; width:88px; z-index:30; }
+.ek{{{cns}}} .ek-inputs { left:-88px; } .ek{{{cns}}} .ek-outputs { right:-88px; }
+.ek{{{cns}}} .ek-jack { position:relative; margin-bottom:13px; }

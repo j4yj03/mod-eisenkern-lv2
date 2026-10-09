@@ -1,0 +1,167 @@
+ [
+  {
+   "symbol": "eisen",
+   "name": "Eisen",
+   "short": "Eisen",
+   "default": 0,
+   "min": 0,
+   "max": 3,
+   "step": 1,
+   "labels": [
+    "60s",
+    "80s",
+    "00s",
+    "Symmetric"
+   ],
+   "group": "core"
+  },
+ {
+  "symbol": "drive",
+  "name": "Drive",
+  "short": "Drive",
+  "default": 0,
+  "min": -18,
+  "max": 24,
+  "step": 0.1,
+  "unit": "db",
+  "group": "core"
+ },
+ {
+  "symbol": "saturation",
+  "name": "Saturation",
+  "short": "Sat",
+  "default": 100,
+  "min": 0,
+  "max": 150,
+  "step": 0.5,
+  "unit": "pc",
+  "group": "core"
+ },
+ {
+  "symbol": "bass",
+  "name": "Bass",
+  "short": "Bass",
+  "default": 1,
+  "min": 0.5,
+  "max": 2,
+  "step": 0.01,
+  "group": "core"
+ },
+ {
+  "symbol": "remanence",
+  "name": "Remanence",
+  "short": "Rem",
+  "default": 100,
+  "min": 0,
+  "max": 150,
+  "step": 0.5,
+  "unit": "pc",
+  "group": "core"
+ },
+ {
+  "symbol": "output",
+  "name": "Output",
+  "short": "Output",
+  "default": 0,
+  "min": -24,
+  "max": 24,
+  "step": 0.1,
+  "unit": "db",
+  "group": "level"
+ },
+ {
+  "symbol": "load",
+  "name": "Load",
+  "short": "Load",
+  "default": 10000,
+  "min": 1000,
+  "max": 100000,
+  "step": 10,
+  "group": "expert"
+ },
+ {
+  "symbol": "source",
+  "name": "Source",
+  "short": "Source",
+  "default": 600,
+  "min": 100,
+  "max": 2000,
+  "step": 5,
+  "group": "expert"
+ },
+ {
+  "symbol": "hf_frequency",
+  "name": "HF Corner",
+  "short": "HF",
+  "default": 26000,
+  "min": 15000,
+  "max": 120000,
+  "step": 100,
+  "group": "expert"
+ },
+ {
+  "symbol": "hf_q",
+  "name": "HF Q",
+  "short": "Q",
+  "default": 0.7071067811865475,
+  "min": 0.4,
+  "max": 1.5,
+  "step": 0.01,
+  "group": "expert"
+ },
+ {
+  "symbol": "family",
+  "name": "Family",
+  "short": "Family",
+  "default": 0,
+  "min": 0,
+  "max": 1,
+  "step": 1,
+  "labels": [
+   "Power",
+   "Fröhlich"
+  ],
+  "group": "expert"
+ },
+ {
+  "symbol": "exponent",
+  "name": "Exponent",
+  "short": "Exp",
+  "default": 3,
+  "min": 2,
+  "max": 13,
+  "step": 1,
+  "integer": true,
+  "group": "expert"
+ },
+ {
+  "symbol": "enabled",
+  "name": "Enabled",
+  "short": "Enabled",
+  "default": 1,
+  "min": 0,
+  "max": 1,
+  "step": 1,
+  "toggle": true,
+  "designation": "enabled",
+  "group": "system"
+ },
+ {
+  "symbol": "oversampling",
+  "name": "Oversampling",
+  "short": "OS",
+  "default": 0,
+  "min": 0,
+  "max": 2,
+  "step": 1,
+  "labels": [
+   "Off",
+   "2x",
+   "4x"
+  ],
+  "jsfx_slider": 15,
+  "lv2_append": true,
+  "connection_optional": true,
+  "group": "system"
+ }
+]
