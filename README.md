@@ -9,15 +9,23 @@ gegen einen Datenblatt-Fit (Jensen JT-11P-1-Referenz) abgestimmt — es besteht
 **keine zertifizierte Hardwaregleichheit** und keine Revisionstreue aus
 Literatur allein.
 
-## Status: Metadaten + Generator (2026-10-09, 0.1.1)
+## Vorschau
+
+| Mono | Stereo |
+|---|---|
+| ![Eisenkern Mono — MOD-GUI](lv2/eisenkern.lv2/modgui/screenshot-mono.png) | ![Eisenkern Stereo — MOD-GUI](lv2/eisenkern.lv2/modgui/screenshot-stereo.png) |
+
+## Status (2026-10-09, 0.1.3)
 
 Der Solver-Kern ist aus dem Geschwisterprojekt
 [`mod-1175-lv2`](https://github.com/j4yj03/mod-1175-lv2)
-(Green Stripe 76) **bitgleich übertragen und verifiziert**; Generator
-und Plugin-Metadaten (LV2-TTL-Satz mit Port-Gruppen, Presets,
-JSFX-Wrappers, RPL) sind aufgebaut. Der LV2-DSP-Wrapper (A2) und die
-EEL2-Engine (A3) folgen; die JSFX-Wrappers sind bis dahin noch nicht
-ladbar. Danach übernimmt ein eigener Agent die Weiterentwicklung.
+(Green Stripe 76) **bitgleich übertragen und verifiziert**; Generator,
+Plugin-Metadaten (LV2-TTL-Satz mit Port-Gruppen, Presets, JSFX-Wrappers,
+RPL) und die **modgui** (kompakte Kopfplatte, Chicken-Head-Profilwähler,
+natives Preset-Dropdown, vorbereitete THD-Anzeige) sind aufgebaut. Der
+LV2-DSP-Wrapper (A2) und die EEL2-Engine (A3) folgen; die JSFX-Wrappers
+sind bis dahin noch nicht ladbar. Danach übernimmt ein eigener Agent die
+Weiterentwicklung.
 
 - **Plan/Arbeitsschritte:** [`docs/TODO.md`](docs/TODO.md)
 - **Arbeitsregeln für Agenten:** [`AGENTS.md`](AGENTS.md)
